@@ -114,11 +114,15 @@ while choice != 3:
     if choice == 1:
         print("Booking ticket .........")
     elif choice == 2:
+        
+        
         print("Checking Status")
     elif choice == 3:
         print("Thank you for using Indian Railways!")
     else:
         print("Invalid Choice!")   
+        
+
 
             
 
