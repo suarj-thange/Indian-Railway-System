@@ -103,12 +103,107 @@
 #         break 
 #     print(i)
     
-for i in range(20):      
-    if i == 12:
-        continue 
-    print(i)   
+# for i in range(20):       ---------- Continue
+#     if i == 12:
+#         continue 
+#     print(i)   
 
 
+# ----------- Assingn Variables
+
+train_name = "Mahalakshmi Express"           
+train_number = 12001
+ticket_price = 1800.00
+is_ac_available = True
+seat_number = [1,2,3,4,5,6,7,8,9,10]
+
+# print("Train Name: ",train_name)              
+# print("Train Number: ",train_number)
+# print("Ticket Price:" ,ticket_price)
+# print("AC Availability: ",is_ac_available)
+# print("Seat Numbers: ",seat_number)      
+
+# print("The data Type of train_name: ",type(train_name))              ------ print variables data type
+# print("The data type of train_number:",type(train_number))
+# print("The data type of ticket_price: ",type(ticket_price))
+# print("The data type of is_ac_available: ",type(is_ac_available))
+# print("The data type of seat_number: ",type(seat_number))
+
+# print("=== Indian Railway Booking System ====")                   ---------- input 
+
+# passenger_name = input("Enter Passenger Name: ")
+# Age = input("Enter Passenger Age: ")
+# Destination = input("Enter Destination: ")
+
+# print("\n === Passenger Booking Details ===")              ----------- print input 
+# print(f"Passenger Name: {passenger_name}")
+# print(f"Passenger Age: {Age}")
+# print(f"Destination: {Destination}")
+# print("\n Booking Confirmed !!!")
+
+# base_price = 1800                               --------- Arithmetic Operation
+# service_charge = 150
+# total_price = base_price + service_charge
+
+# print(f"Base Ticket Price: ₹{base_price}")
+# print(f"Service Charge: ₹{service_charge}")
+# print(f"Total Ticket Price: ₹{total_price}")
 
 
-                           
+# has_ticket = True                         ----- Logical operator
+# has_id_proof = True
+# can_board = has_ticket and has_id_proof
+# print(f"Can Board Train? {can_board}")
+
+# passenger_age = int(input("Enter Passenger Age: "))                   -------- if condition
+
+# if passenger_age < 5:
+#     print("Category: Infant")
+# elif passenger_age <= 18:
+#     print("Category: Young")
+# elif passenger_age <= 45:
+#     print("Category: Adult")
+# elif passenger_age <= 60:
+#     print("Category: Senior")
+# else: 
+#   print("Category: Old")    
+                
+# Ticket_price = 1800                                          ------ Discount Calculation
+# passenger_age = int(input("Enter Passenger Age: ")) 
+
+# if passenger_age <= 5:
+#     print("Category: Infant")
+#     print(f"Ticket Price: 0")
+# elif passenger_age <=18:
+#      print("Category: Young") 
+#      discounted_price = Ticket_price - (Ticket_price * 0.20)  
+#      print(f"Base Ticket Price: {Ticket_price} \n Discounted Ticket Price: {discounted_price}")
+# elif passenger_age <= 45:
+#     print("Category: Adult")  
+#     discounted_price = Ticket_price - (Ticket_price * 0.35)  
+#     print(f"Base Ticket Price: {Ticket_price} \n Discounted Ticket Price: {discounted_price}")                   
+# elif passenger_age <= 60:
+#     print("Category: Senior") 
+#     discounted_price = Ticket_price - (Ticket_price * 0.50)  
+#     print(f"Base Ticket Price: {Ticket_price} \n Discounted Ticket Price: {discounted_price}")  
+# else: 
+#     print("Category: Old")     
+#     discounted_price = Ticket_price - (Ticket_price * 0.70)  
+#     print(f"Base Ticket Price: {Ticket_price} \n Discounted Ticket Price: {discounted_price}")  
+
+trains = [
+    {"name": "Rajdhani Express",
+     "number": 12301,
+     "destination": "New Delhi"},
+    {"name": "Shatabi Express",
+     "number": 12001,
+     "destination": "Chennai"},
+    {"name": "Duronto Express",
+     "number": 12291,
+     "destination": "Mumbai"}
+]   
+print("Available Trains: ")
+for train in trains:
+    print(f"{train['number']} - {train['name']} to {train['destination']}")
+
+    

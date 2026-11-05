@@ -102,25 +102,25 @@ seat_number = [1,2,3,4,5]
     
  # While Loop - Booking System
  
-print("\n ==== Booking Menu ====")
-choice = 0
+# print("\n ==== Booking Menu ====")
+# choice = 0
 
-while choice != 3:
-    print("1. Book Ticket")
-    print("2. Check Status")
-    print("3. Exit")
-    choice = int(input("Enter Your Choice: "))
+# while choice != 3:
+#     print("1. Book Ticket")
+#     print("2. Check Status")
+#     print("3. Exit")
+#     choice = int(input("Enter Your Choice: "))
     
-    if choice == 1:
-        print("Booking ticket .........")
-    elif choice == 2:
+#     if choice == 1:
+#         print("Booking ticket .........")
+#     elif choice == 2:
         
         
-        print("Checking Status")
-    elif choice == 3:
-        print("Thank you for using Indian Railways!")
-    else:
-        print("Invalid Choice!")   
+#         print("Checking Status")
+#     elif choice == 3:
+#         print("Thank you for using Indian Railways!")
+#     else:
+#         print("Invalid Choice!")   
         
 
 
