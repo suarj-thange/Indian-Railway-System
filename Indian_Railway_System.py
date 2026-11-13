@@ -114,17 +114,109 @@ seat_number = [1,2,3,4,5]
 #     if choice == 1:
 #         print("Booking ticket .........")
 #     elif choice == 2:
-        
-        
 #         print("Checking Status")
 #     elif choice == 3:
 #         print("Thank you for using Indian Railways!")
 #     else:
 #         print("Invalid Choice!")   
         
+# Ticket_price = 1800                                          # Example Ticket Booking System
+# name = input("Enter Passenger Name: ")                           # ------ Discount Calculatio
+# passenger_age = int(input("Enter Passenger Age: "))
+# destination = input("Enter Destination: ") 
+
+# print("\n ===== Passenger Booking Details\n")
+# if passenger_age <= 5:
+#     print(f"Pasenger Name: {name}")
+#     print(f"Destination: {destination}")
+#     print("Category: Infant")
+#     print(f"Ticket Price: 0")
+# elif passenger_age <=18:
+#      print(f"Pasenger Name: {name}")
+#      print(f"Destination: {destination}")
+#      print("Category: Young") 
+#      discounted_price = Ticket_price - (Ticket_price * 0.20)  
+#      print(f"Base Ticket Price: {Ticket_price} \nDiscounted Ticket Price: {discounted_price}")
+# elif passenger_age <= 45:
+#     print(f"Pasenger Name: {name}")
+#     print(f"Destination: {destination}")
+#     print("Category: Adult")  
+#     discounted_price = Ticket_price - (Ticket_price * 0.35)  
+#     print(f"Base Ticket Price: {Ticket_price} \nDiscounted Ticket Price: {discounted_price}")                   
+# elif passenger_age <= 60:
+#     print(f"Pasenger Name: {name}")
+#     print(f"Destination: {destination}")
+#     print("Category: Senior") 
+#     discounted_price = Ticket_price - (Ticket_price * 0.50)  
+#     print(f"Base Ticket Price: {Ticket_price} \nDiscounted Ticket Price: {discounted_price}")  
+# else: 
+#     print(f"Pasenger Name: {name}")
+#     print(f"Destination: {destination}")
+#     print("Category: Old")     
+#     discounted_price = Ticket_price - (Ticket_price * 0.70)  
+#     print(f"Base Ticket Price: {Ticket_price} \nDiscounted Ticket Price: {discounted_price}")  
+
+
+# Ticket Price Calculator
+
+def calculated_ticket_price(distance,class_type):
+    base_rate = 0.5
+
+    if class_type == "Sleeper":
+        multiplier = 1.0
+    elif class_type == "AC 3 Tier":
+        multiplier = 2.0
+    elif class_type == "AC 2 Tier":
+        multiplier = 2.5
+    elif class_type == "AC 1 Tier":
+        multiplier = 3.0
+    else:
+        multiplier = 1.0
+    price = distance * base_rate * multiplier
+
+    return round(price,2)
+
+distance = 500
+Class_type = "Sleeper"
+price = calculated_ticket_price(distance,Class_type)
+
+print(f"Price for {distance}km in {Class_type} : ₹{price}")
+
+
+# Ticket Booking
+
+def book_ticket(passenger_name,age,destination,class_type = "Sleeper"):
+    Ticket = {
+        "Passenger Name" : passenger_name,
+        "Age" : age,
+        "Destination" : destination,
+        "Booking ID" :f"BK{hash(passenger_name)% 10000:04d}"
+    }
+    return Ticket
+
+def get_passenger_details(*args,**kwargs):
+    print("Positional arguments : ",args)
+    print("Keyword arguments : ",kwargs)
+
+
+ticket1 = book_ticket("Samyak Ubale",22,"Goa","AC 1 tier")
+ticket2 = book_ticket("Priya Singh",21,"Delhi","AC 3 tier")
+
+print("\nTicket 1 : ",ticket1)
+print("\nTicket 2 : ",ticket2)
+
+get_passenger_details("Samyak",22,"Goa",class_type = "AC 1 tier",Meal_Preference = "NON-VEG")        
+        
 
 
             
 
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  

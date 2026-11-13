@@ -10,16 +10,16 @@
 #      print(i) 
 
 
-# num = 5
+# num = 5                          # Table Example
 # for i in range(1,11):
 #     print(num, "x", i, "=", num*i)
      
-# total = 0
+# total = 0                            # sum of numbers in range 
 # for i in range (1,11):
 #     total = total + i
 # print("Total: ",total)     
      
-# num = 5 
+# num = 5                 # Factorial Example
 # fact = 1
 
 # for i in range(1,num + 1):
@@ -27,24 +27,22 @@
 # print("Factorial: ",fact)      
 
 
-# chars = "Python"
-
+# chars = "Python"              # Character in single string
 # for char in chars:
 #     print(char)
 
-# names =["Suraj","Tejas","Om","Yash"]
+# names =["Suraj","Tejas","Om","Yash"]         # Character in list Sequencley
 # for name in names:
 #     print(name)    
     
-# num  = [10,30,20,45,40,200,60,202,756]
-
+# num  = [10,30,20,45,40,200,60,202,756]         # Find Largest Number in list
 # largest = num[0]
 # for i in num:
 #     if i > largest:
 #         largest = i 
 # print("The Largest Number: ",largest)        
 
-# text = "python programming"
+# text = "python programming"           # Count Number Of Vowels (IN)
 # count = 0
 # for char in text:
 #     if char in "aeiou":
@@ -53,21 +51,19 @@
               
 # While loop----------
 
-# i = 1
-
+# i = 1                     # Print while condnition Fails
 # while i <= 10:
 #     print(i)
 #     i+=1
     
-# i=1
+# i=1                      #
 # total=0
 # while i <= 10:
 #     total += i
 #     i += 1 
-    
 # print("Total: ",total) 
 
-# num = 12345                    -- Reverse
+# num = 12345                     # Reverse
 # reverse =0 
 
 # while num > 0:
@@ -191,19 +187,117 @@ seat_number = [1,2,3,4,5,6,7,8,9,10]
 #     discounted_price = Ticket_price - (Ticket_price * 0.70)  
 #     print(f"Base Ticket Price: {Ticket_price} \n Discounted Ticket Price: {discounted_price}")  
 
-trains = [
-    {"name": "Rajdhani Express",
-     "number": 12301,
-     "destination": "New Delhi"},
-    {"name": "Shatabi Express",
-     "number": 12001,
-     "destination": "Chennai"},
-    {"name": "Duronto Express",
-     "number": 12291,
-     "destination": "Mumbai"}
-]   
-print("Available Trains: ")
-for train in trains:
-    print(f"{train['number']} - {train['name']} to {train['destination']}")
+# trains = [
+#     {"name": "Rajdhani Express",
+#      "number": 12301,
+#      "destination": "New Delhi"},
+#     {"name": "Shatabi Express",
+#      "number": 12001,
+#      "destination": "Chennai"},
+#     {"name": "Duronto Express",
+#      "number": 12291,
+#      "destination": "Mumbai"}
+# ]   
+# print("Available Trains: ")
+# for train in trains:
+#     print(f"{train['number']} - {train['name']} to {train['destination']}")
 
+# num = 7
+# fact = 1
+# for i in range(1,num + 1):
+#     fact = fact * i
+
+# print("Factorial: ",fact)
+
+# def greet():
+#     print("Hello Mister/Miss!!!")
+
+# greet() 
+
+# def greet():
+#     name = input("Enter Your Name! : ")
+#     print(f"Hello {name}!, How are you?")
     
+# greet()  
+
+# def greet(name):
+#     print(f"Hello {name}!, How are you?") 
+    
+# greet("Suraj")
+
+# def greet(name="Guest"):
+#     print(f"Hello! {name}! How are you?")
+    
+# greet("Suraj") 
+
+# def welcome():
+#     print("Welcome to the proffesional Course!!!")
+#     print("Let's Learn Data Science!!!") 
+
+# welcome() 
+
+# def age_verification():
+#     age = int(input("Enter your age: "))
+    
+#     if age>=18:
+#         print("Applicable for the License !!!")
+#     else:
+#         print("Try Again Next Time")
+        
+# age_verification()            
+                                      
+# Login System 
+                                      
+# def login(user_name):     
+#     password = input("Enter your password: ")
+#     while password != "suraj123":
+#         print("Wrong Password")
+#         password = input("Enter your password: ")    
+#     else:
+#         print(f"Hello! {user_name}")
+  
+# login("Suraj")       
+
+# def add(a,b):
+#     return a+b 
+
+# def multiply(x,y):
+#     print(x*y)
+    
+# add(2,3)
+# multiply(2,3)
+
+# print("Add: ",add(2,3))
+# print("Multiply: ",multiply(2,3)) 
+
+# def student(name,age):
+#     print(f"{name} is {age} years old !!!")
+    
+# student("suraj",22)
+
+# def total_score(*marks):
+#     print("Marks: ",marks)
+#     print("Total Score: ",sum(marks))
+#     print("percentage: ",sum(marks)/len(marks))
+    
+# total_score(85, 97, 99)
+ 
+# def total_score(*marks):
+#     print("Marks: ",marks)
+#     print("Total Score: ",sum(marks)) 
+#     import numpy as np
+#     print("percentage: ",np.mean(marks))            
+    
+# total_score(85, 97, 99)
+
+# def employee_details(**details):
+#     for key,value in details.items():
+#         print(key,":",value)
+        
+# employee_details(
+#     Emp_name = "Suraj",
+#     Age = 22,
+#     Department = "IT",
+#     Salary = "10k"
+# )
+
