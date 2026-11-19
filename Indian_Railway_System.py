@@ -159,55 +159,84 @@ seat_number = [1,2,3,4,5]
 
 # Ticket Price Calculator
 
-def calculated_ticket_price(distance,class_type):
-    base_rate = 0.5
+# def calculated_ticket_price(distance,class_type):
+#     base_rate = 0.5
 
-    if class_type == "Sleeper":
-        multiplier = 1.0
-    elif class_type == "AC 3 Tier":
-        multiplier = 2.0
-    elif class_type == "AC 2 Tier":
-        multiplier = 2.5
-    elif class_type == "AC 1 Tier":
-        multiplier = 3.0
-    else:
-        multiplier = 1.0
-    price = distance * base_rate * multiplier
+#     if class_type == "Sleeper":
+#         multiplier = 1.0
+#     elif class_type == "AC 3 Tier":
+#         multiplier = 2.0
+#     elif class_type == "AC 2 Tier":
+#         multiplier = 2.5
+#     elif class_type == "AC 1 Tier":
+#         multiplier = 3.0
+#     else:
+#         multiplier = 1.0
+#     price = distance * base_rate * multiplier
 
-    return round(price,2)
+#     return round(price,2)
 
-distance = 500
-Class_type = "Sleeper"
-price = calculated_ticket_price(distance,Class_type)
+# distance = 500
+# Class_type = "Sleeper"
+# price = calculated_ticket_price(distance,Class_type)
 
-print(f"Price for {distance}km in {Class_type} : ₹{price}")
-
-
-# Ticket Booking
-
-def book_ticket(passenger_name,age,destination,class_type = "Sleeper"):
-    Ticket = {
-        "Passenger Name" : passenger_name,
-        "Age" : age,
-        "Destination" : destination,
-        "Booking ID" :f"BK{hash(passenger_name)% 10000:04d}"
-    }
-    return Ticket
-
-def get_passenger_details(*args,**kwargs):
-    print("Positional arguments : ",args)
-    print("Keyword arguments : ",kwargs)
+# print(f"Price for {distance}km in {Class_type} : ₹{price}")
 
 
-ticket1 = book_ticket("Samyak Ubale",22,"Goa","AC 1 tier")
-ticket2 = book_ticket("Priya Singh",21,"Delhi","AC 3 tier")
+# Ticket Booking ---------------------------------------------------------------------
 
-print("\nTicket 1 : ",ticket1)
-print("\nTicket 2 : ",ticket2)
+# def book_ticket(passenger_name,age,destination,class_type = "Sleeper"):
+#     Ticket = {
+#         "Passenger Name" : passenger_name,
+#         "Age" : age,
+#         "Destination" : destination,
+#         "Booking ID" :f"BK{hash(passenger_name)% 10000:04d}"
+#     }
+#     return Ticket
 
-get_passenger_details("Samyak",22,"Goa",class_type = "AC 1 tier",Meal_Preference = "NON-VEG")        
+# def get_passenger_details(*args,**kwargs):
+#     print("Positional arguments : ",args)
+#     print("Keyword arguments : ",kwargs)
+
+
+# ticket1 = book_ticket("Samyak Ubale",22,"Goa","AC 1 tier")
+# ticket2 = book_ticket("Priya Singh",21,"Delhi","AC 3 tier")
+
+# print("\nTicket 1 : ",ticket1)
+# print("\nTicket 2 : ",ticket2)
+
+# get_passenger_details("Samyak",22,"Goa",class_type = "AC 1 tier",Meal_Preference = "NON-VEG")        
         
+# Calculate DIscounts
 
+# calculate_discount = lambda price,discount_percentage : price * (1 - discount_percentage/100)
+
+# original_price = 1500
+
+# dicounted_price = calculate_discount(original_price,20)
+
+# print(f"Original Price: ₹{original_price}, Discounted Price: ₹{dicounted_price}")
+
+# trains = [
+#     {"name":"Rajdhani","price":2500,"duration":16},
+#     {"name":"Shatabdi","price":1800,"duration":8},
+#     {"name":"Duronto","price":2000,"duration":12},
+# ]
+
+# # Map ------------
+
+# train_names = list(map(lambda x: x['name'],trains)) 
+# print(f"\nTrain Names: {train_names}")
+
+# # Filter ------------------
+
+# affordable_trains = list(filter(lambda x: x['price'] <2200, trains))
+# print(f"\nAffordable Train Names: ",[t["name"]for t in affordable_trains])
+
+# # Sorted ----------------------
+
+# sorted_by_price = sorted(trains,key=lambda x: x["price"])
+# print("\nSorted by price: ",[t["name"] for t in sorted_by_price])
 
             
 

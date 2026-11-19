@@ -163,50 +163,50 @@
 
 # print("Length: ",len(movie))
 
-# Date & Time 
+# Date & Time --------------------------------------------------------------
 
-import datetime
+# import datetime
 
-# Current date & time
+# # Current date & time
 
-now = datetime.datetime.now()
-print("Now: ", now )
+# now = datetime.datetime.now()
+# print("Now: ", now )
 
-# Today
+# # Today
 
-today = datetime.date.today()
-print("Today: ",today)
+# today = datetime.date.today()
+# print("Today: ",today)
 
-# Specific Date 
-birth_date = datetime.date(2005,3,10)
-print("Birth Date: ",birth_date.strftime("%d-%B-%Y"))
+# # Specific Date 
+# birth_date = datetime.date(2005,3,10)
+# print("Birth Date: ",birth_date.strftime("%d-%B-%Y"))
 
-# Time Difference 
+# # Time Difference 
 
-diff = today - birth_date
-print("Days Since Birth: ",diff.days)
+# diff = today - birth_date
+# print("Days Since Birth: ",diff.days)
 
-#Current Components
+# #Current Components
 
-print("Year: ",now.year)
-print("Month: ",now.month)
-print("Day: ",now.day)
-print("Hour: ",now.hour)
-print("Minute: ",now.minute)
-print("Second: ",now.second)
+# print("Year: ",now.year)
+# print("Month: ",now.month)
+# print("Day: ",now.day)
+# print("Hour: ",now.hour)
+# print("Minute: ",now.minute)
+# print("Second: ",now.second)
 
-# Create a time object 
+# # Create a time object 
 
-t = datetime.time(10, 30, 15)
-print("Custom Time: ",t)
+# t = datetime.time(10, 30, 15)
+# print("Custom Time: ",t)
 
-# Combine date & time 
+# # Combine date & time 
 
-dt = datetime.datetime.combine(today,t)
-print("Combined Datetime: ", dt)
+# dt = datetime.datetime.combine(today,t)
+# print("Combined Datetime: ", dt)
 
-# Formating 
-print("Formatted: ", now.strftime("%A, %d %B %Y %I:%M %p"))
+# # Formating 
+# print("Formatted: ", now.strftime("%A, %d %B %Y %I:%M %p"))
 
 
 
