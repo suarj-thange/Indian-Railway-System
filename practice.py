@@ -301,3 +301,45 @@ seat_number = [1,2,3,4,5,6,7,8,9,10]
 #     Salary = "10k"
 # )
 
+class myclass:
+    total_students = 6
+    
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+    def info (self):
+            print(f"{self.name} is {self.age} years old!")
+std1 = myclass("Suraj",22)
+std2 = myclass("Om",23)
+
+print(std1.age)
+print(std2.name)
+print(std1.info())
+print(std2.info())
+print(std1.total_students)
+print(std2.total_students)
+print(myclass.total_students)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

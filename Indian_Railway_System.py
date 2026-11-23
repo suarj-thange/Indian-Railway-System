@@ -238,8 +238,84 @@ seat_number = [1,2,3,4,5]
 # sorted_by_price = sorted(trains,key=lambda x: x["price"])
 # print("\nSorted by price: ",[t["name"] for t in sorted_by_price])
 
-            
+# OOP Based Train System -------------------------------
 
+# class Train:
+    
+#     def __init__(self,train_no,train_name,source,destination,total_seats):
+#         self.train_no = train_no
+#         self.train_name = train_name
+#         self.source = source
+#         self.destination = destination
+#         self.total_seats = total_seats
+#         self.available_seats = total_seats
+        
+#     def display_info(self):
+#         print(f"{self.train_no} - {self.train_name}")
+#         print(f"Route: {self.source} to {self.destination}")
+#         print(f"Available Seats: {self.available_seats}/{self.total_seats}") 
+        
+#     def book_seats(self):
+#         if self.available_seats > 0:
+#             self.available_seats -= 1
+#             return True
+#         return False
+
+# train1 = Train(12301,"Rajdhani Express","Howrah","New Delhi",700)
+# train2 = Train(12502,"Deccan Express","CSMT","Pune",500)
+# train3 = Train(12701,"Chennai Express","LTT","Chennai",650)
+
+# print(" === Train Information ===")
+# train1.display_info()
+# print()
+# train2.display_info()
+# print()
+# train3.display_info()
+
+# print("\n === Booking Tickets ===")
+
+# if train1.book_seats():
+#    print("Seats Booked Successfully in Rajdhani Express!!")
+#    train1.display_info()
+ 
+class Train:
+    def __init__(self,train_no,train_name,source,destination):
+        self.train_no = train_no
+        self.train_name = train_name
+        self.source = source
+        self.destination = destination
+        
+    def get_info(self):
+        return f"{self.train_no} - {self.train_name}"    
+                    
+class ExpressTrain(Train):
+    def __init__(self,train_no,train_name,source,destination,max_speed):
+        super().__init__(train_no,train_name,source,destination)
+        self.max_speed = max_speed
+        
+    def get_info(self):
+        base_info = super().get_info()
+        return f"{base_info} Max Speed: {self.max_speed} km/h"
+    
+class PassengerTrain(Train):
+    def __init__(self,train_no,train_name,source,destination,stops):
+        super().__init__(train_no,train_name,source,destination)
+        self.stops = stops
+
+    def get_info(self):
+        base_info = super().get_info()
+        return f"{base_info} (Total Stops: {len(self.stops)})"
+    
+express = ExpressTrain(12301,"Rajdhani Express","Howrah","New Delhi",135)
+passenger = PassengerTrain(11301,"Sinhagad Express","CSMT","Pune",["CSMT","Kalyan","Karjat","Lonavla","Shivajinagar","Pune"])
+
+print("=== Train Types ====")
+print(f"Express Train: {express.get_info()}")
+print(f"Passenger Train: {passenger.get_info()}")
+
+
+
+            
 
  
  
