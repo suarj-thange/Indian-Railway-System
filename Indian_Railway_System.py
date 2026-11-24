@@ -278,42 +278,114 @@ seat_number = [1,2,3,4,5]
 #    print("Seats Booked Successfully in Rajdhani Express!!")
 #    train1.display_info()
  
-class Train:
-    def __init__(self,train_no,train_name,source,destination):
-        self.train_no = train_no
-        self.train_name = train_name
-        self.source = source
-        self.destination = destination
+# class Train:
+#     def __init__(self,train_no,train_name,source,destination):
+#         self.train_no = train_no
+#         self.train_name = train_name
+#         self.source = source
+#         self.destination = destination
         
-    def get_info(self):
-        return f"{self.train_no} - {self.train_name}"    
+#     def get_info(self):
+#         return f"{self.train_no} - {self.train_name}"    
                     
-class ExpressTrain(Train):
-    def __init__(self,train_no,train_name,source,destination,max_speed):
-        super().__init__(train_no,train_name,source,destination)
-        self.max_speed = max_speed
+# class ExpressTrain(Train):
+#     def __init__(self,train_no,train_name,source,destination,max_speed):
+#         super().__init__(train_no,train_name,source,destination)
+#         self.max_speed = max_speed
         
-    def get_info(self):
-        base_info = super().get_info()
-        return f"{base_info} Max Speed: {self.max_speed} km/h"
+#     def get_info(self):
+#         base_info = super().get_info()
+#         return f"{base_info} Max Speed: {self.max_speed} km/h"
     
-class PassengerTrain(Train):
-    def __init__(self,train_no,train_name,source,destination,stops):
-        super().__init__(train_no,train_name,source,destination)
-        self.stops = stops
+# class PassengerTrain(Train):
+#     def __init__(self,train_no,train_name,source,destination,stops):
+#         super().__init__(train_no,train_name,source,destination)
+#         self.stops = stops
 
-    def get_info(self):
-        base_info = super().get_info()
-        return f"{base_info} (Total Stops: {len(self.stops)})"
+#     def get_info(self):
+#         base_info = super().get_info()
+#         return f"{base_info} (Total Stops: {len(self.stops)})"
     
-express = ExpressTrain(12301,"Rajdhani Express","Howrah","New Delhi",135)
-passenger = PassengerTrain(11301,"Sinhagad Express","CSMT","Pune",["CSMT","Kalyan","Karjat","Lonavla","Shivajinagar","Pune"])
+# express = ExpressTrain(12301,"Rajdhani Express","Howrah","New Delhi",135)
+# passenger = PassengerTrain(11301,"Sinhagad Express","CSMT","Pune",["CSMT","Kalyan","Karjat","Lonavla","Shivajinagar","Pune"])
 
-print("=== Train Types ====")
-print(f"Express Train: {express.get_info()}")
-print(f"Passenger Train: {passenger.get_info()}")
+# print("=== Train Types ====")
+# print(f"Express Train: {express.get_info()}")
+# print(f"Passenger Train: {passenger.get_info()}")
 
 
+# Encapsulation  ---------------------------------------------------------------------
+
+# class BankAccount:
+#     def __init__(self, account_no,initial_balance=0):
+#         self._account_no = account_no            # Protected Attribute
+#         self.__balance = initial_balance         # Private Attribute
+    
+#     @property
+#     def balance(self):
+#         return self.__balance   
+    
+#     @property
+#     def account_number(self):
+#         return self._account_no
+    
+#     def deposit(self,amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             print(f"Deposited Amount: ₹{amount}. Current Balance: ₹{self.__balance}.")
+#         else:
+#             print("Invalid Amount !!!")  
+            
+#     def withdraw(self,amount):
+#         if 0 < amount <= self.__balance:
+#             self.__balance -= amount
+#             print(f"Withdrawl Amount: ₹{amount}. Current Balance: ₹{self.__balance}.")
+#         else:
+#             print("Insufficient Balance")    
+            
+# class Ticket:
+#     def __init__(self,passenger_name,train_no,seat_number):
+#         self.__passenger_name = passenger_name
+#         self.__train_no = train_no
+#         self.__seat_number = seat_number
+#         self.__is_confirmed = False
+        
+#     def Confirm_ticket(self):
+#         self.__is_confirmed = True
+        
+#     def Details(self):
+#         status = "Confirmed" if self.__is_confirmed else "Pending"
+#         return{
+#             "Passenger: ":self.__passenger_name,
+#             "Train: ":self.__train_no,
+#             "Seat Number: ":self.__seat_number,
+#             "Status: ": status      
+#         } 
+
+# print("=== Bank Account ===")
+
+# account = BankAccount("SBI9461820529") 
+# account.deposit(5000)
+# account.withdraw(1500)
+# print("Current Balance: ₹",account.balance)
+
+# print("\n=== Ticket Confirmation")     
+
+# ticket = Ticket("Suraj Thange",12301,"A1")
+# print("Before Confirmation: ",ticket.Details())
+# ticket.Confirm_ticket()
+# print("After Confirmation: ",ticket.Details())  
+           
+# Polymorphism 
+
+class Paymentmethod:
+    def process_payment(self,amount):
+        raise NotImplementedError("Subclass must implement abstract method")  
+    
+class CreditCard(Paymentmethod):
+         
+      
+         
 
             
 
