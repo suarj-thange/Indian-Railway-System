@@ -376,17 +376,111 @@ seat_number = [1,2,3,4,5]
 # ticket.Confirm_ticket()
 # print("After Confirmation: ",ticket.Details())  
            
-# Polymorphism 
+# Polymorphism  -----------------------------------------------------------------------------
 
-class Paymentmethod:
-    def process_payment(self,amount):
-        raise NotImplementedError("Subclass must implement abstract method")  
+# class PaymentMethod:
+#     def process_payment(self,amount):
+#         raise NotImplementedError("Subclass must implement abstract method")  
     
-class CreditCard(Paymentmethod):
-         
+# class CreditCard(PaymentMethod):
+#     def process_payment(self, amount):
+#         return f"Processing {amount} via Credit card."
       
+# class DebitCard(PaymentMethod):
+#     def process_payment(self, amount):
+#         return f"Processing {amount} via Debit card."   
+    
+# class UPI(PaymentMethod):
+#     def process_payment(self, amount):
+#         return f"Processing {amount} via UPI."   
+    
+# class NetBanking(PaymentMethod):
+#     def process_payment(self, amount):
+#         return f"Processing {amount} via NetBanking."    
          
+# def make_payment(payment_method,amount):
+#     return payment_method.process_payment(amount)
 
+# print("=== Payment Method===")
+
+# payments=  [
+#     CreditCard(),
+#     DebitCard(),
+#     UPI(),
+#     NetBanking()
+# ]
+
+# for payment in payments:
+#     print(make_payment(payment,1500))
+    
+# Magic Method ----------------------------------------------------------
+
+# class Ticket:
+#     def __init__(self,pnr,passenger_name):
+#         self.pnr = pnr
+#         self.passenger_name = passenger_name  
+        
+#     def __str__(self):                                            
+#         return f"Ticket(PNR: {self.pnr}, Passenger: {self.passenger_name})"
+    
+#     def __repr__(self):
+#         return f"Ticket(pnr = '{self.pnr}', passenger_name = '{self.passenger_name}')"
+    
+#     def __eq__(self,other):                              #  -------------- Compare
+#         if isinstance(other,Ticket):
+#             return self.pnr == other.pnr
+#         return False
+    
+# print(" === Ticket Magic Methods ===")
+
+# ticket1 = Ticket("1234567890","Suraj Thange")
+# ticket2 = Ticket("1234567890","Suraj Thange")
+# ticket3 = Ticket("0987654321","Tejas Palve")
+
+# print(f"User-Friendly: {ticket1}")
+# print(f"Developer-Friendly :{repr(ticket2)}")
+# print(f"Ticket1 == Ticket2: {ticket1 == ticket2}")
+# print(f"Ticket1 == Ticket3: {ticket1 == ticket3}")
+
+# Train Schedule Management -------------------------------------------------
+
+train_schedule = []
+
+train_schedule.append({
+    "Number":12301,
+    "Name":"Rajdhani Express",
+    "Departure": "14:00",
+    "Arrival": "10:30",
+    "Duration": "20h 30m"
+})
+
+train_schedule.append({
+    "Number":12501,
+    "Name":"Mahalaxmi Express",
+    "Departure": "16:00",
+    "Arrival": "20:30",
+    "Duration": "4h 30m"
+})
+
+# List operations
+
+print("Train Schedules")
+print(f"Total Trains: {len(train_schedule)}")
+
+first_train = train_schedule[0]
+print(f"First Train: {first_train}")
+
+morning_trains = train_schedule[:1]
+print(f"Morning Train Name: {[t['Name'] for t in morning_trains]}")
+
+
+
+
+
+
+
+
+            
             
 
  
